@@ -45,17 +45,21 @@ with open("number.txt", 'r') as Number_File, open("even.squared.txt", 'w') as Ev
             # APPEND the new number to odd.txt file
             Odd_Cubed.write(str(New_Odd) + "\n")
 
+print("Processing...")
+time.sleep(2)
+
 #DISPLAY the numbers in even.squared.txt
 with open("even.squared.txt", 'r') as Even_Squared :    
   even = Even_Squared.read().split('\n')
   text = "EVEN Squared : "
 font = "digital"
-color = "magenta"
+color = "yellow"
 output = pyfiglet.figlet_format(text, font=font, width=200)
 outputColor = colored(output, color)
 
 time.sleep(2)
 print(Fore.YELLOW + "=" * 100)
+time.sleep(2)
 print(Fore.LIGHTCYAN_EX + "╔═*.·:·.✧ ✦ ✧.·:·.*═╗" * 5)
 for line in outputColor.split("\n"):
     print(line.center(80))
@@ -70,16 +74,17 @@ with open("odd.cubed.txt", 'r') as Odd_Cubed:
   odd = Odd_Cubed.read().split('\n')  
   text = " ODD Cubed : "
 font = "digital"
-color = "magenta"
+color = "yellow"
 output = pyfiglet.figlet_format(text, font=font, width=200)
 outputColor = colored(output, color)
 
 time.sleep(2)
 print(Fore.YELLOW + "=" * 100)
-print(Fore.LIGHTCYAN_EX + "┏━━━✦❘༻༺❘✦━━━┓" * 5)
+time.sleep(2)
+print(Fore.LIGHTCYAN_EX + "┏━━━✦❘༻༺❘✦━━━┓" * 7)
 for line in outputColor.split("\n"):
     print(line.center(80))
-print(Fore.LIGHTCYAN_EX + "┗━━━✦❘༻༺❘✦━━━┛" * 5) 
+print(Fore.LIGHTCYAN_EX + "┗━━━✦❘༻༺❘✦━━━┛" * 7) 
 time.sleep(3) 
 print(Fore.LIGHTWHITE_EX + line.center(20) + str(odd))
 
