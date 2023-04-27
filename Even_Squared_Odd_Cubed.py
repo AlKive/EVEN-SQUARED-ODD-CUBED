@@ -13,13 +13,15 @@ from colorama import Back, Fore, Style, init
 import time
 
 
-# OPEN file (numbers.txt,even.txt,odd.txt) as write
+# OPEN file (numbers.txt, "w") as Number_File
 with open("number.txt", 'w') as Number_File:
+  #loop the user input function  
   while True :
      try:
         # GET user input (20 numbers/Integers) and store it in numbers.txt file
          user = int(input(Fore.LIGHTBLUE_EX + "Enter a number: " + Fore.YELLOW))
          if user <= 0 or user >= 0:
+           #APPEND the integer inputs into the number.txt file
            Number_File.write(str(user) + "\n")
            continue
      except:
@@ -31,16 +33,16 @@ with open("number.txt", 'r') as Number_File, open("even.squared.txt", 'w') as Ev
           Number = int(line)
         # CHECK if Number is EVEN
           if Number % 2 == 0:
-            #Square the even number
+            #SQUARE the even number
             New_Even = Number ** 2
-            # APPEND the Number to even.txt file
+            # APPEND the new number to even.squared.txt file
             Even_Squared.write(str(New_Even) + "\n")
 
         # CHECK if Number is ODD
           elif Number % 2 != 0:
-            #Square the odd number
+            #CUBE the odd number
             New_Odd = Number ** 3
-            # APPEND the Number to odd.txt file
+            # APPEND the new number to odd.txt file
             Odd_Cubed.write(str(New_Odd) + "\n")
 
 
