@@ -18,7 +18,9 @@ with open("number.txt", 'w') as Number_File:
   #loop the user input function  
   while True :
      try:
-        # GET user input (20 numbers/Integers) and store it in numbers.txt file
+        #PROMPT the user
+         print(Fore.RED + "Enter any key to stop input: ")
+        # GET user input (numbers/Integers) and store it in numbers.txt file
          user = int(input(Fore.LIGHTBLUE_EX + "Enter a number: " + Fore.YELLOW))
          if user <= 0 or user >= 0:
            #APPEND the integer inputs into the number.txt file
